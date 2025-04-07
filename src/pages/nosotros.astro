@@ -1,0 +1,411 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+---
+
+<Layout
+	title="Nosotros"
+	description="Lorem ipsum dolor sit amet"
+	pubDate={new Date('August 08 2021')}
+	heroImage="/blog-placeholder-about.jpg"
+>
+	
+	<!-- Banner Section -->
+	<section
+		class="flex flex-col justify-center items-center py-24 bg-stone-100"
+		aria-label="Company Information"
+	>
+		<article class="flex flex-col max-w-full text-center w-[882px]">
+			<h1
+				class="gap-2.5 self-center p-2.5 max-w-full text-3xl font-semibold leading-10 capitalize text-neutral-800 w-[561px] max-md:max-w-full"
+			>
+				<span class="text-white">Caskabel Digital</span>
+				Donde encontraras las ultimas noticias
+			</h1>
+
+			<div
+				class="flex flex-col justify-between items-center mt-3 w-full text-base min-h-[255px] text-neutral-600 max-md:max-w-full"
+			>
+				<p
+					class="gap-2.5 self-stretch p-2.5 max-w-full leading-6 w-[685px] max-md:max-w-full"
+				>
+					En Caskabel digital, nos dedicamos a brindarles la cobertura
+					más completa y actualizada sobre noticias, política y
+					deportes. Nuestro equipo de periodistas y colaboradores
+					trabaja incansablemente para ofrecerles artículos profundos,
+					análisis detallados y reportajes exclusivos que les
+					mantendrán informados y comprometidos con los eventos más
+					importantes del mundo.
+				</p>
+
+				<p
+					class="gap-2.5 self-stretch p-2.5 mt-1 max-w-full leading-6 w-[685px] max-md:max-w-full"
+				>
+					Estamos aquí para ayudarte. Ponte en contacto con nuestro
+					equipo para más información sobre nuestra revista
+				</p>
+
+				<h2
+					class="gap-2.5 self-stretch p-2.5 mt-1 text-lg font-medium capitalize text-neutral-800"
+				>
+					La mejor idea puede cambiar quienes somos
+				</h2>
+			</div>
+		</article>
+
+		<section class="w-full" aria-label="Partner Companies">
+			<h2
+				class="gap-2.5 self-stretch p-2.5 mt-14 text-3xl font-semibold leading-snug text-center capitalize text-neutral-800 max-md:mt-10 max-md:max-w-full"
+			>
+				<span class="text-white">Somos</span>
+				Con los que trabajamos
+			</h2>
+
+			<div
+				class="flex flex-wrap gap-10 items-start justify-center mt-14 max-md:mt-10 max-md:max-w-full"
+			>
+				<img
+					src="https://cdn.builder.io/api/v1/image/assets/TEMP/de5c5a17ff5ff60e63ebef7c18b002c9689da199?placeholderIfAbsent=true&apiKey=2ae942d826f94e6aab2cf449d09e4472"
+					alt="Partner company logo 1"
+					class="object-contain shrink-0 w-36 aspect-[4.24]"
+				/>
+				<img
+					src="https://cdn.builder.io/api/v1/image/assets/TEMP/e766441f5539c696bd06456936c434b15b0148af?placeholderIfAbsent=true&apiKey=2ae942d826f94e6aab2cf449d09e4472"
+					alt="Partner company logo 2"
+					class="object-contain shrink-0 aspect-[4.05] w-[150px]"
+				/>
+				<img
+					src="https://cdn.builder.io/api/v1/image/assets/TEMP/d10420149df71dbd74816cdb62be01d2db789f68?placeholderIfAbsent=true&apiKey=2ae942d826f94e6aab2cf449d09e4472"
+					alt="Partner company logo 3"
+					class="object-contain shrink-0 aspect-[4.85] w-[170px]"
+				/>
+				<img
+					src="https://cdn.builder.io/api/v1/image/assets/TEMP/f6c4404e7bc7c13a9407ca6233e05647da5ff6c2?placeholderIfAbsent=true&apiKey=2ae942d826f94e6aab2cf449d09e4472"
+					alt="Partner company logo 4"
+					class="object-contain shrink-0 aspect-[6.45] w-[194px]"
+				/>
+			</div>
+		</section>
+	</section>
+
+	<!-- Fin Banner Section -->
+	<!-- Section autor -->
+	<section
+		class="flex flex-col justify-between p-2.5 max-w-[823px]"
+		aria-labelledby="authors-title"
+	>
+		<h1
+			id="authors-title"
+			class="self-center max-w-full text-3xl font-semibold leading-snug text-center capitalize text-neutral-800 w-[347px]"
+		>
+			<span class="text-white">Conoce</span>
+			nuestros autores
+		</h1>
+
+		<div
+			class="flex flex-wrap gap-4 items-start mt-20 w-full max-md:mt-10 max-md:max-w-full"
+			role="list"
+		>
+			<article
+				class="flex grow shrink justify-between items-center min-w-60 w-[275px]"
+				role="listitem"
+			>
+				<div
+					class="flex gap-2.5 items-center self-stretch p-2.5 my-auto w-[170px]"
+				>
+					<img
+						src="https://cdn.builder.io/api/v1/image/assets/TEMP/471f6783293432d1e976fc5e4ab70b08a5b4c39d?placeholderIfAbsent=true&apiKey=2ae942d826f94e6aab2cf449d09e4472"
+						alt="Foto de Ana Vacacela"
+						class="object-contain self-stretch my-auto aspect-square w-[150px]"
+					/>
+				</div>
+				<div class="self-stretch my-auto text-base w-[174px]">
+					<h2
+						class="gap-2.5 self-stretch p-1.5 w-full text-2xl font-semibold leading-snug capitalize text-neutral-800"
+					>
+						Ana Vacacela
+					</h2>
+					<p
+						class="py-1.5 mt-1.5 font-medium capitalize text-neutral-500 w-[84px]"
+					>
+						13 posts
+					</p>
+					<a
+						href="#"
+						class="flex gap-5 items-center p-1.5 mt-1.5 text-yellow-400 hover:underline focus:outline-none focus:ring-2 focus:ring-yellow-400"
+					>
+						<span class="self-stretch my-auto"
+							>Detalles del Autor</span
+						>
+						<img
+							src="https://cdn.builder.io/api/v1/image/assets/TEMP/62e0c1aaa41afd8c7defb6aecee569b6d74cd065?placeholderIfAbsent=true&apiKey=2ae942d826f94e6aab2cf449d09e4472"
+							alt=""
+							aria-hidden="true"
+							class="object-contain shrink-0 self-stretch my-auto w-2.5"
+						/>
+					</a>
+				</div>
+			</article>
+
+			<article
+				class="flex grow shrink justify-between items-center min-w-60 w-[275px]"
+				role="listitem"
+			>
+				<div
+					class="flex gap-2.5 items-center self-stretch p-2.5 my-auto w-[170px]"
+				>
+					<img
+						src="https://cdn.builder.io/api/v1/image/assets/TEMP/471f6783293432d1e976fc5e4ab70b08a5b4c39d?placeholderIfAbsent=true&apiKey=2ae942d826f94e6aab2cf449d09e4472"
+						alt="Foto de Ana Vacacela"
+						class="object-contain self-stretch my-auto aspect-square w-[150px]"
+					/>
+				</div>
+				<div class="self-stretch my-auto text-base w-[174px]">
+					<h2
+						class="gap-2.5 self-stretch p-1.5 w-full text-2xl font-semibold leading-snug capitalize text-neutral-800"
+					>
+						Ana Vacacela
+					</h2>
+					<p
+						class="py-1.5 mt-1.5 font-medium capitalize text-neutral-500 w-[84px]"
+					>
+						13 posts
+					</p>
+					<a
+						href="#"
+						class="flex gap-5 items-center p-1.5 mt-1.5 text-yellow-400 hover:underline focus:outline-none focus:ring-2 focus:ring-yellow-400"
+					>
+						<span class="self-stretch my-auto"
+							>Detalles del Autor</span
+						>
+						<img
+							src="https://cdn.builder.io/api/v1/image/assets/TEMP/1b6469ab6c2535e5bcf6485eacfea335b452f136?placeholderIfAbsent=true&apiKey=2ae942d826f94e6aab2cf449d09e4472"
+							alt=""
+							aria-hidden="true"
+							class="object-contain shrink-0 self-stretch my-auto w-2.5"
+						/>
+					</a>
+				</div>
+			</article>
+
+			<article
+				class="flex grow shrink justify-between items-center min-w-60 w-[275px]"
+				role="listitem"
+			>
+				<div
+					class="flex gap-2.5 items-center self-stretch p-2.5 my-auto w-[170px]"
+				>
+					<img
+						src="https://cdn.builder.io/api/v1/image/assets/TEMP/471f6783293432d1e976fc5e4ab70b08a5b4c39d?placeholderIfAbsent=true&apiKey=2ae942d826f94e6aab2cf449d09e4472"
+						alt="Foto de Ana Vacacela"
+						class="object-contain self-stretch my-auto aspect-square w-[150px]"
+					/>
+				</div>
+				<div class="self-stretch my-auto text-base w-[174px]">
+					<h2
+						class="gap-2.5 self-stretch p-1.5 w-full text-2xl font-semibold leading-snug capitalize text-neutral-800"
+					>
+						Ana Vacacela
+					</h2>
+					<p
+						class="py-1.5 mt-1.5 font-medium capitalize text-neutral-500 w-[84px]"
+					>
+						13 posts
+					</p>
+					<a
+						href="#"
+						class="flex gap-5 items-center p-1.5 mt-1.5 text-yellow-400 hover:underline focus:outline-none focus:ring-2 focus:ring-yellow-400"
+					>
+						<span class="self-stretch my-auto"
+							>Detalles del Autor</span
+						>
+						<img
+							src="https://cdn.builder.io/api/v1/image/assets/TEMP/62e0c1aaa41afd8c7defb6aecee569b6d74cd065?placeholderIfAbsent=true&apiKey=2ae942d826f94e6aab2cf449d09e4472"
+							alt=""
+							aria-hidden="true"
+							class="object-contain shrink-0 self-stretch my-auto w-2.5"
+						/>
+					</a>
+				</div>
+			</article>
+
+			<article
+				class="flex grow shrink justify-between items-center min-w-60 w-[275px]"
+				role="listitem"
+			>
+				<div
+					class="flex gap-2.5 items-center self-stretch p-2.5 my-auto w-[170px]"
+				>
+					<img
+						src="https://cdn.builder.io/api/v1/image/assets/TEMP/471f6783293432d1e976fc5e4ab70b08a5b4c39d?placeholderIfAbsent=true&apiKey=2ae942d826f94e6aab2cf449d09e4472"
+						alt="Foto de Ana Vacacela"
+						class="object-contain self-stretch my-auto aspect-square w-[150px]"
+					/>
+				</div>
+				<div class="self-stretch my-auto text-base w-[174px]">
+					<h2
+						class="gap-2.5 self-stretch p-1.5 w-full text-2xl font-semibold leading-snug capitalize text-neutral-800"
+					>
+						Ana Vacacela
+					</h2>
+					<p
+						class="py-1.5 mt-1.5 font-medium capitalize text-neutral-500 w-[84px]"
+					>
+						13 posts
+					</p>
+					<a
+						href="#"
+						class="flex gap-5 items-center p-1.5 mt-1.5 text-yellow-400 hover:underline focus:outline-none focus:ring-2 focus:ring-yellow-400"
+					>
+						<span class="self-stretch my-auto"
+							>Detalles del Autor</span
+						>
+						<img
+							src="https://cdn.builder.io/api/v1/image/assets/TEMP/62e0c1aaa41afd8c7defb6aecee569b6d74cd065?placeholderIfAbsent=true&apiKey=2ae942d826f94e6aab2cf449d09e4472"
+							alt=""
+							aria-hidden="true"
+							class="object-contain shrink-0 self-stretch my-auto w-2.5"
+						/>
+					</a>
+				</div>
+			</article>
+
+			<article
+				class="flex grow shrink justify-between items-center min-w-60 w-[275px]"
+				role="listitem"
+			>
+				<div
+					class="flex gap-2.5 items-center self-stretch p-2.5 my-auto w-[170px]"
+				>
+					<img
+						src="https://cdn.builder.io/api/v1/image/assets/TEMP/471f6783293432d1e976fc5e4ab70b08a5b4c39d?placeholderIfAbsent=true&apiKey=2ae942d826f94e6aab2cf449d09e4472"
+						alt="Foto de Ana Vacacela"
+						class="object-contain self-stretch my-auto aspect-square w-[150px]"
+					/>
+				</div>
+				<div class="self-stretch my-auto text-base w-[174px]">
+					<h2
+						class="gap-2.5 self-stretch p-1.5 w-full text-2xl font-semibold leading-snug capitalize text-neutral-800"
+					>
+						Ana Vacacela
+					</h2>
+					<p
+						class="py-1.5 mt-1.5 font-medium capitalize text-neutral-500 w-[84px]"
+					>
+						13 posts
+					</p>
+					<a
+						href="#"
+						class="flex gap-5 items-center p-1.5 mt-1.5 text-yellow-400 hover:underline focus:outline-none focus:ring-2 focus:ring-yellow-400"
+					>
+						<span class="self-stretch my-auto"
+							>Detalles del Autor</span
+						>
+						<img
+							src="https://cdn.builder.io/api/v1/image/assets/TEMP/62e0c1aaa41afd8c7defb6aecee569b6d74cd065?placeholderIfAbsent=true&apiKey=2ae942d826f94e6aab2cf449d09e4472"
+							alt=""
+							aria-hidden="true"
+							class="object-contain shrink-0 self-stretch my-auto w-2.5"
+						/>
+					</a>
+				</div>
+			</article>
+
+			<article
+				class="flex grow shrink justify-between items-center min-w-60 w-[275px]"
+				role="listitem"
+			>
+				<div
+					class="flex gap-2.5 items-center self-stretch p-2.5 my-auto w-[170px]"
+				>
+					<img
+						src="https://cdn.builder.io/api/v1/image/assets/TEMP/471f6783293432d1e976fc5e4ab70b08a5b4c39d?placeholderIfAbsent=true&apiKey=2ae942d826f94e6aab2cf449d09e4472"
+						alt="Foto de Ana Vacacela"
+						class="object-contain self-stretch my-auto aspect-square w-[150px]"
+					/>
+				</div>
+				<div class="self-stretch my-auto text-base w-[174px]">
+					<h2
+						class="gap-2.5 self-stretch p-1.5 w-full text-2xl font-semibold leading-snug capitalize text-neutral-800"
+					>
+						Ana Vacacela
+					</h2>
+					<p
+						class="py-1.5 mt-1.5 font-medium capitalize text-neutral-500 w-[84px]"
+					>
+						13 posts
+					</p>
+					<a
+						href="#"
+						class="flex gap-5 items-center p-1.5 mt-1.5 text-yellow-400 hover:underline focus:outline-none focus:ring-2 focus:ring-yellow-400"
+					>
+						<span class="self-stretch my-auto"
+							>Detalles del Autor</span
+						>
+						<img
+							src="https://cdn.builder.io/api/v1/image/assets/TEMP/62e0c1aaa41afd8c7defb6aecee569b6d74cd065?placeholderIfAbsent=true&apiKey=2ae942d826f94e6aab2cf449d09e4472"
+							alt=""
+							aria-hidden="true"
+							class="object-contain shrink-0 self-stretch my-auto w-2.5"
+						/>
+					</a>
+				</div>
+			</article>
+		</div>
+	</section>
+
+	<!-- Fin section autor -->
+	<!-- Block de contacto -->
+	<section
+		class="flex flex-col gap-5 justify-center items-center px-5 py-10 pt-4 pr-14 pl-20 mx-auto bg-white h-[226px] max-md:px-4 max-md:py-8 max-md:max-w-[991px] max-sm:px-2.5 max-sm:py-5 max-sm:max-w-screen-sm"
+		aria-labelledby="feedback-title"
+	>
+		<h2
+			id="feedback-title"
+			class="text-xl font-semibold leading-7 text-center capitalize text-neutral-800 max-md:text-xl max-sm:text-lg font-['Noto_Sans']"
+		>
+			Comparte Tus Opiniones Con Nuestros Redactores
+		</h2>
+
+		<div class="flex justify-center">
+			<button
+				class="group relative w-[238px] h-[47px] transition-transform duration-200 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2"
+				aria-label="Write On Notebook"
+			>
+				<svg
+					width="238"
+					height="47"
+					viewBox="0 0 238 47"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					class="absolute top-0 left-0"
+				>
+					<rect
+						x="1"
+						y="0.5"
+						width="236"
+						height="46"
+						rx="5.5"
+						stroke="#FFCC00"
+						class="transition-all duration-200 group-hover:stroke-[2]"
+					></rect>
+					<text
+						fill="#FFCC00"
+						xml:space="preserve"
+						style="white-space: pre"
+						font-family="Noto Sans"
+						font-size="17"
+						letter-spacing="0em"
+						class="transition-all duration-200"
+					>
+						<tspan x="52.5957" y="30.096">Write On Notebook</tspan>
+					</text>
+					<path
+						d="M43.857 16.3518L44.2436 16.7384C44.7763 17.2718 44.6957 18.2173 44.0621 18.8502L36.0898 26.8225L33.5069 27.7673C33.1825 27.8866 32.8667 27.7319 32.8025 27.4233C32.7808 27.3114 32.791 27.1956 32.832 27.0892L33.7952 24.4839L41.7452 16.5333C42.3788 15.9003 43.3243 15.8191 43.857 16.3525V16.3518ZM35.7419 17.1446C35.8279 17.1446 35.9131 17.1616 35.9926 17.1945C36.0721 17.2274 36.1444 17.2757 36.2052 17.3366C36.2661 17.3974 36.3143 17.4696 36.3472 17.5491C36.3802 17.6286 36.3971 17.7138 36.3971 17.7999C36.3971 17.8859 36.3802 17.9711 36.3472 18.0506C36.3143 18.1301 36.2661 18.2024 36.2052 18.2632C36.1444 18.324 36.0721 18.3723 35.9926 18.4052C35.9131 18.4382 35.8279 18.4551 35.7419 18.4551H33.1209C32.7734 18.4551 32.4401 18.5932 32.1943 18.8389C31.9485 19.0847 31.8105 19.418 31.8105 19.7656V27.6284C31.8105 27.976 31.9485 28.3093 32.1943 28.5551C32.4401 28.8008 32.7734 28.9389 33.1209 28.9389H40.9838C41.3313 28.9389 41.6647 28.8008 41.9104 28.5551C42.1562 28.3093 42.2942 27.976 42.2942 27.6284V25.0075C42.2942 24.8337 42.3633 24.667 42.4862 24.5441C42.609 24.4213 42.7757 24.3522 42.9495 24.3522C43.1233 24.3522 43.2899 24.4213 43.4128 24.5441C43.5357 24.667 43.6047 24.8337 43.6047 25.0075V27.6284C43.6047 28.3235 43.3286 28.9902 42.8371 29.4817C42.3455 29.9732 41.6789 30.2494 40.9838 30.2494H33.1209C32.4258 30.2494 31.7592 29.9732 31.2677 29.4817C30.7761 28.9902 30.5 28.3235 30.5 27.6284V19.7656C30.5 19.0705 30.7761 18.4038 31.2677 17.9123C31.7592 17.4208 32.4258 17.1446 33.1209 17.1446H35.7419Z"
+						fill="#FFCC00"
+						class="transition-all duration-200"></path>
+				</svg>
+			</button>
+		</div>
+	</section>
+	<!-- FIn block contacto -->
+</Layout>
