@@ -4,9 +4,9 @@ import { SITE_TITLE } from "../consts";
 import { Icon } from "astro-icon/components";
 ---
 
-<header>
+<header class="flex justify-center bg-yellow-50">
 	<nav
-		class="flex flex-wrap gap-10 items-center py-3 pr-36 pl-40 bg-yellow-50 max-md:px-5"
+		class="flex flex-wrap gap-10 items-center py-3 max-md:px-5 w-full max-w-7xl"
 		aria-label="Main navigation"
 	>
 		<div
@@ -19,71 +19,57 @@ import { Icon } from "astro-icon/components";
 					class="object-contain aspect-[3.04] w-[146px]"
 				/>
 			</a>
-			<button
-				class="gap-2.5 self-stretch p-2.5 my-auto text-base font-bold leading-none text-yellow-800 bg-yellow-400 rounded-xl hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-600"
-			>
-				<a href="/vivo">EN VIVO</a>
-			</button>
+			<a href="/vivo">
+				<button
+					class="gap-2.5 self-stretch p-2.5 my-auto text-base font-bold leading-none text-yellow-800 bg-yellow-400 rounded-xl hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-600"
+				>
+					EN VIVO
+				</button>
+			</a>
 		</div>
 
 		<div
 			class="flex flex-wrap gap-10 items-center self-stretch my-auto min-w-60 max-md:max-w-full"
 		>
 			<a
-				href="/portada"
-				class="gap-2.5 self-stretch my-auto text-base font-bold leading-none whitespace-nowrap text-zinc-800 hover:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-zinc-600"
+				href="/"
+				class="gap-2 self-stretch my-auto text-base leading-none whitespace-nowrap hover:font-semibold"
 			>
 				Portada
 			</a>
 
 			<a
 				href="/nosotros"
-				class="gap-2.5 self-stretch p-2.5 my-auto text-base font-medium leading-none underline whitespace-nowrap text-zinc-800 hover:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-zinc-600"
+				class="gap-2 self-stretch my-auto text-base leading-none whitespace-nowrap hover:font-semibold"
 			>
 				Nosotros
 			</a>
 
-			<button
-				class="flex justify-between items-center self-stretch my-auto w-[113px] hover:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-zinc-600"
-				aria-expanded="false"
-				aria-haspopup="true"
+			<a
+				href="/contacto"
+				class="gap-2 self-stretch my-auto text-base leading-none whitespace-nowrap hover:font-semibold"
 			>
-				<span
-					class="gap-2.5 self-stretch p-2.5 my-auto text-base font-medium leading-none whitespace-nowrap text-zinc-800"
-				>
-					Categories
-				</span>
-				<span
-					class="flex flex-col justify-center self-stretch p-2.5 my-auto w-[27px]"
-				>
-					<img
-						src="https://cdn.builder.io/api/v1/image/assets/TEMP/922f25de7bc5415bdaa09bdefc1f1379b0053cd6?placeholderIfAbsent=true&apiKey=2ae942d826f94e6aab2cf449d09e4472"
-						alt="Expand categories"
-						class="object-contain aspect-[2.33] w-[7px]"
-					/>
-				</span>
-			</button>
+				Contacto
+			</a>
 
 			<a
 				href="/revista"
-				class="gap-2.5 self-stretch my-auto text-base font-medium leading-none whitespace-nowrap text-zinc-800 hover:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-zinc-600"
+				class="gap-2 self-stretch my-auto text-base leading-none whitespace-nowrap hover:font-semibold"
 			>
 				Revista
 			</a>
 
-			<img
-				src="https://cdn.builder.io/api/v1/image/assets/TEMP/71710840f55357da15767905c2ec97faddde066f?placeholderIfAbsent=true&apiKey=2ae942d826f94e6aab2cf449d09e4472"
-				alt="Separator"
-				class="object-contain shrink-0 self-stretch my-auto w-3 aspect-square"
-				aria-hidden="true"
-			/>
-
 			<a
 				href="/contacto"
-				class="flex items-center self-stretch my-auto group hover:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-zinc-600"
+				class="flex items-center self-stretch my-auto group"
 			>
 				<span
-					class="flex gap-2.5 items-center self-stretch my-auto w-[13px]"
+					class="gap-2 self-stretch my-auto text-base leading-none whitespace-nowrap hover:font-semibold pr-1"
+				>
+					Contacto
+				</span>
+				<span
+					class="flex gap-2 items-center self-stretch my-auto w-[13px]"
 				>
 					<img
 						src="https://cdn.builder.io/api/v1/image/assets/TEMP/b4da6eae7cf3689e45653175124fde3ed4265a20?placeholderIfAbsent=true&apiKey=2ae942d826f94e6aab2cf449d09e4472"
@@ -92,14 +78,9 @@ import { Icon } from "astro-icon/components";
 						aria-hidden="true"
 					/>
 				</span>
-				<span
-					class="gap-2.5 self-stretch p-2.5 my-auto text-base font-medium leading-none underline whitespace-nowrap text-zinc-800 group-hover:text-zinc-600"
-				>
-					Contacto
-				</span>
 			</a>
-
-			<div
+			<!-- BOTON PARA CAMBIA TEMA CLARO A OSCURO -->
+			<!-- <div
 				class="flex relative gap-1 items-start self-stretch my-auto min-h-[41px] w-[70px]"
 			>
 				<button
@@ -125,8 +106,7 @@ import { Icon } from "astro-icon/components";
 						</div>
 					</div>
 				</button>
-			</div>
+			</div> -->
 		</div>
 	</nav>
 </header>
-
