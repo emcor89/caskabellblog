@@ -9,135 +9,130 @@ import Layout from "../layouts/BlogPost.astro";
 	heroImage="/blog-placeholder-about.jpg"
 >
 	<section
-		class="flex justify-between items-center px-5 py-2.5 mx-auto my-0 w-full bg-stone-100 max-w-[994px] min-h-[372px] max-md:gap-5 max-md:p-4 max-md:max-w-[991px] max-sm:flex-col max-sm:p-2.5 max-sm:max-w-screen-sm"
+		class="flex justify-center bg-yellow-50 py-24"
 		role="main"
 		aria-label="Digital Magazine Section"
 	>
-		<article
-			class="flex flex-col gap-8 px-0 py-7 max-w-[492px] max-md:px-0 max-md:py-5 max-sm:px-0 max-sm:py-4 max-sm:max-w-full"
+		<div
+			class="flex flex-row justify-between gap-6 max-md:flex-col max-sm:gap-6 w-full max-md:max-w-full max-w-7xl"
 		>
-			<h1
-				class="flex gap-1.5 items-center text-3xl font-bold leading-9 max-md:text-2xl max-sm:text-xl"
+			<article
+				class="flex flex-col gap-8 px-0 py-7 max-w-[492px] max-md:px-0 max-md:py-5 max-sm:px-0 max-sm:py-4 max-sm:max-w-full"
 			>
-				<span class="text-white">Revista</span>
-				<span class="text-neutral-800">Digital</span>
-			</h1>
-			<p class="text-base leading-6 text-neutral-600 max-sm:text-sm">
-				En Caskabel digital, nos dedicamos a brindarles la cobertura más
-				completa y actualizada sobre noticias, política y deportes.
-				Nuestro equipo de periodistas y colaboradores trabaja
-				incansablemente para ofrecerles artículos profundos, análisis
-				detallados y reportajes exclusivos que les mantendrán informados
-				y comprometidos con los eventos más importantes del mundo.
-			</p>
-		</article>
+				<h2
+					class="flex gap-1.5 items-center text-3xl font-bold leading-9 max-md:text-2xl max-sm:text-xl"
+				>
+					<span class="text-white bg-yellow-400 p-1">Revista</span>
+					<span class="text-neutral-800">Digital</span>
+				</h2>
+				<p class="text-base leading-6 text-neutral-600 max-sm:text-sm">
+					En Caskabel digital, nos dedicamos a brindarles la cobertura
+					más completa y actualizada sobre noticias, política y
+					deportes. Nuestro equipo de periodistas y colaboradores
+					trabaja incansablemente para ofrecerles artículos profundos,
+					análisis detallados y reportajes exclusivos que les
+					mantendrán informados y comprometidos con los eventos más
+					importantes del mundo.
+				</p>
+			</article>
 
-		<figure
-			class="flex flex-1 justify-center items-center p-2.5 max-sm:p-1.5 max-sm:w-full"
-		>
-			<img
-				src="https://cdn.builder.io/api/v1/image/assets/TEMP/0a81d4344cd5273cf263d8e758003f335a55d376"
-				alt="Magazine cover showing New Scientist with climate change headline"
-				class="object-contain max-w-full h-auto max-h-[332px]"
-			/>
-		</figure>
+			<figure
+				class="flex flex-1 justify-center items-center p-2.5 max-sm:p-1.5 max-sm:w-full"
+			>
+				<img
+					src="https://cdn.builder.io/api/v1/image/assets/TEMP/0a81d4344cd5273cf263d8e758003f335a55d376"
+					alt="Magazine cover showing New Scientist with climate change headline"
+					class="object-contain max-w-full h-auto max-h-[332px]"
+				/>
+			</figure>
+		</div>
 	</section>
 	<!-- revist section -->
-	<main
-		class="flex flex-wrap gap-2.5 justify-center p-5"
+	<section
+		class="flex justify-center items-center flex-col mb-8"
 		role="region"
 		aria-label="Image Gallery"
 	>
-		<figure class="p-2.5 flex-[shrink] w-[828px]">
-			<img
-				src="https://cdn.builder.io/api/v1/image/assets/TEMP/12bd2ee7f714fd8c60da385b84a4492aba5d7465"
-				alt="Guerra para la paz"
-				class="w-full h-[365px] object-cover rounded-[8px]"
-			/>
-		</figure>
-
-		<figure class="flex items-center p-2.5">
-			<img
-				src="https://cdn.builder.io/api/v1/image/assets/TEMP/40c7cfe847df25151eb07bf7dbd7c4e8c80327db"
-				alt="Ecuador: ¿Transita por un nuevo camino?"
-				class="w-[251px] h-[358px] object-cover rounded-[8px]"
-			/>
-		</figure>
-
-		<figure class="p-2.5 flex-[shrink] w-[828px]">
-			<img
-				src="https://cdn.builder.io/api/v1/image/assets/TEMP/12bd2ee7f714fd8c60da385b84a4492aba5d7465"
-				alt="El eje del mal"
-				class="w-full h-[365px] object-cover rounded-[8px]"
-			/>
-		</figure>
-
-		<figure class="flex items-center p-2.5">
-			<img
-				src="https://cdn.builder.io/api/v1/image/assets/TEMP/40c7cfe847df25151eb07bf7dbd7c4e8c80327db"
-				alt="¿Qué rivalidades esconden los primeros mandatarios?"
-				class="w-[251px] h-[358px] object-cover rounded-[8px]"
-			/>
-		</figure>
-	</main>
-
-	<!-- fin revista section -->
-	<!-- block contact -->
-	<main
-		class="flex flex-col justify-center items-center w-full bg-white min-h-[screen]"
-		role="main"
-	>
-		<section
-			class="flex flex-col gap-2.5 justify-center items-center px-20 py-9 mx-auto w-full rounded-xl bg-stone-100 max-w-[1076px] max-md:px-16 max-md:py-8 max-sm:px-8 max-sm:py-5"
-			aria-labelledby="write-with-us-title"
+		<div
+			class="flex flex-row justify-center flex-wrap gap-6 max-md:flex-col max-sm:gap-6 max-w-5xl m-8"
 		>
-			<div
-				class="flex flex-col gap-2.5 justify-between items-center w-full max-w-[659px]"
+			<figure class="flex flex-col items-center p-2.5">
+				<img
+					src="https://cdn.builder.io/api/v1/image/assets/TEMP/40c7cfe847df25151eb07bf7dbd7c4e8c80327db"
+					alt="Ecuador: ¿Transita por un nuevo camino?"
+					class="w-[251px] h-[358px] object-cover rounded-[8px]"
+				/>
+				<h3 class="mt-4">Edicion numero #109</h3>
+				<p>Descagarla</p>
+			</figure>
+			<figure class="flex flex-col items-center p-2.5">
+				<img
+					src="https://cdn.builder.io/api/v1/image/assets/TEMP/40c7cfe847df25151eb07bf7dbd7c4e8c80327db"
+					alt="Ecuador: ¿Transita por un nuevo camino?"
+					class="w-[251px] h-[358px] object-cover rounded-[8px]"
+				/>
+				<h3 class="mt-4">Edicion numero #109</h3>
+				<p>Descagarla</p>
+			</figure>
+			<figure class="flex flex-col items-center p-2.5">
+				<img
+					src="https://cdn.builder.io/api/v1/image/assets/TEMP/40c7cfe847df25151eb07bf7dbd7c4e8c80327db"
+					alt="Ecuador: ¿Transita por un nuevo camino?"
+					class="w-[251px] h-[358px] object-cover rounded-[8px]"
+				/>
+				<h3 class="mt-4">Edicion numero #109</h3>
+				<p>Descagarla</p>
+			</figure>
+			<figure class="flex flex-col items-center p-2.5">
+				<img
+					src="https://cdn.builder.io/api/v1/image/assets/TEMP/40c7cfe847df25151eb07bf7dbd7c4e8c80327db"
+					alt="Ecuador: ¿Transita por un nuevo camino?"
+					class="w-[251px] h-[358px] object-cover rounded-[8px]"
+				/>
+				<h3 class="mt-4">Edicion numero #109</h3>
+				<p>Descagarla</p>
+			</figure>
+			<figure class="flex flex-col items-center p-2.5">
+				<img
+					src="https://cdn.builder.io/api/v1/image/assets/TEMP/40c7cfe847df25151eb07bf7dbd7c4e8c80327db"
+					alt="Ecuador: ¿Transita por un nuevo camino?"
+					class="w-[251px] h-[358px] object-cover rounded-[8px]"
+				/>
+				<h3 class="mt-4">Edicion numero #109</h3>
+				<p>Descagarla</p>
+			</figure>
+			<figure class="flex flex-col items-center p-2.5">
+				<img
+					src="https://cdn.builder.io/api/v1/image/assets/TEMP/40c7cfe847df25151eb07bf7dbd7c4e8c80327db"
+					alt="Ecuador: ¿Transita por un nuevo camino?"
+					class="w-[251px] h-[358px] object-cover rounded-[8px]"
+				/>
+				<h3 class="mt-4">Edicion numero #109</h3>
+				<p>Descagarla</p>
+			</figure>
+		</div>
+
+		<!-- fin revista section -->
+		<!-- block contact -->
+		<section
+			class="flex flex-col px-40 py-14 mt-16 rounded-xl bg-stone-100 items-center"
+		>
+			<h3
+				class="text-xl font-semibold leading-snug text-center text-neutral-800 max-md:max-w-full"
 			>
-				<h1
-					id="write-with-us-title"
-					class="gap-2.5 p-2.5 text-3xl font-bold leading-9 text-center text-neutral-800 max-md:text-2xl max-sm:text-xl"
+				Comparte tus opiniones con nuestros redactores
+			</h3>
+			<button
+				class="mt-6 max-w-full text-lg leading-none text-yellow-400 rounded-none w-[237px]"
+			>
+				<span
+					class="block px-6 py-4 rounded-md border border-yellow-400 border-solid max-md:px-5"
 				>
-					Quieres Escribir Con Nosotros
-				</h1>
-				<p
-					class="gap-2.5 p-2.5 text-base leading-6 text-center text-neutral-600 max-md:text-sm max-sm:text-sm"
-				>
-					Se Parte De Nuestro Equipo De Redactores.
-				</p>
-				<div class="flex justify-center items-center w-full">
-					<button
-						class="flex gap-2.5 justify-center items-center px-5 py-4 rounded-md border border-yellow-400 duration-200 cursor-pointer hover:bg-yellow-50 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2"
-						aria-label="Contactanos"
-					>
-						<svg
-							width="24"
-							height="24"
-							viewBox="0 0 172 48"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-							class="w-[24px] h-[24px] mr-[8px]"
-							aria-hidden="true"
-						>
-							<rect
-								x="1"
-								y="1"
-								width="170"
-								height="46"
-								rx="5.5"
-								stroke="#FFCC00"></rect>
-							<path
-								d="M32.857 16.8518L33.2436 17.2384C33.7763 17.7718 33.6957 18.7173 33.0621 19.3502L25.0898 27.3225L22.5069 28.2673C22.1825 28.3866 21.8667 28.2319 21.8025 27.9233C21.7808 27.8114 21.791 27.6956 21.832 27.5892L22.7952 24.9839L30.7452 17.0333C31.3788 16.4003 32.3243 16.3191 32.857 16.8525V16.8518ZM24.7419 17.6446C24.8279 17.6446 24.9131 17.6616 24.9926 17.6945C25.0721 17.7274 25.1444 17.7757 25.2052 17.8366C25.2661 17.8974 25.3143 17.9696 25.3472 18.0491C25.3802 18.1286 25.3971 18.2138 25.3971 18.2999C25.3971 18.3859 25.3802 18.4711 25.3472 18.5506C25.3143 18.6301 25.2661 18.7024 25.2052 18.7632C25.1444 18.824 25.0721 18.8723 24.9926 18.9052C24.9131 18.9382 24.8279 18.9551 24.7419 18.9551H22.1209C21.7734 18.9551 21.4401 19.0932 21.1943 19.3389C20.9485 19.5847 20.8105 19.918 20.8105 20.2656V28.1284C20.8105 28.476 20.9485 28.8093 21.1943 29.0551C21.4401 29.3008 21.7734 29.4389 22.1209 29.4389H29.9838C30.3313 29.4389 30.6647 29.3008 30.9104 29.0551C31.1562 28.8093 31.2942 28.476 31.2942 28.1284V25.5075C31.2942 25.3337 31.3633 25.167 31.4862 25.0441C31.609 24.9213 31.7757 24.8522 31.9495 24.8522C32.1233 24.8522 32.2899 24.9213 32.4128 25.0441C32.5357 25.167 32.6047 25.3337 32.6047 25.5075V28.1284C32.6047 28.8235 32.3286 29.4902 31.8371 29.9817C31.3455 30.4732 30.6789 30.7494 29.9838 30.7494H22.1209C21.4258 30.7494 20.7592 30.4732 20.2677 29.9817C19.7761 29.4902 19.5 28.8235 19.5 28.1284V20.2656C19.5 19.5705 19.7761 18.9038 20.2677 18.4123C20.7592 17.9208 21.4258 17.6446 22.1209 17.6446H24.7419Z"
-								fill="#FFCC00"></path>
-						</svg>
-						<span class="text-lg font-medium text-yellow-400"
-							>Contactanos</span
-						>
-					</button>
-				</div>
-			</div>
+					Contactanos
+				</span>
+			</button>
 		</section>
-	</main>
+	</section>
 
 	<!-- fin block contsct -->
 </Layout>
