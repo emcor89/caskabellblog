@@ -1,21 +1,51 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
-import BlogPost from '../../layouts/BlogPost.astro';
-import { render } from 'astro:content';
-
+import Layout from "../../layouts/BlogPost.astro";
+import { getAllPosts, getPostBySlug } from "../../lib/wordpress";
 export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	return posts.map((post) => ({
-		params: { slug: post.id },
-		props: post,
+	const posts = await getAllPosts();
+	return posts.map((post: { slug: any }) => ({
+		params: { slug: post.slug },
+		props: { post },
 	}));
 }
-type Props = CollectionEntry<'blog'>;
+const { post } = Astro.props;
 
-const post = Astro.props;
-const { Content } = await render(post);
 ---
 
-<BlogPost {...post.data}>
-	<Content />
-</BlogPost>
+<Layout
+	title="Contacto"
+	description="Lorem ipsum dolor sit amet"
+	pubDate={new Date("August 08 2021")}
+	heroImage="/blog-placeholder-about.jpg"
+>
+	<!-- <h1>Últimos Artículos</h1>
+	<article>
+		<h1>{post.title}</h1>
+		<small>Publicado el: {new Date(post.date).toLocaleDateString()}</small>
+		{
+			post.featuredImage?.node?.sourceUrl && (
+				<img src={post.featuredImage.node.sourceUrl} alt={post.title} />
+			)
+		}
+		<div set:html={post.content} />
+		<div>
+			<strong>Categorías:</strong>
+			{
+				post.categories?.nodes?.map((category) => (
+					<a href={`/blog/category/${category.slug}`}>
+						{category.name}
+					</a>
+				))
+			}
+		</div>
+		<div>
+			<strong>Etiquetas:</strong>
+			{
+				post.tags?.nodes?.map((tag) => (
+					<a href={`/blog/tag/${tag.slug}`}>{tag.name}</a>
+				))
+			}
+		</div>
+		<p>Autor: {post.author?.node?.name}</p>
+	</article> -->
+</Layout>

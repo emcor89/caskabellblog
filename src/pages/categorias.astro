@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/BlogPost.astro';
+import { getAllPosts } from '../lib/wordpress';
+const posts = await getAllPosts();
 ---
 
 <Layout
@@ -8,7 +10,16 @@ import Layout from '../layouts/BlogPost.astro';
 	pubDate={new Date('August 08 2021')}
 	heroImage="/blog-placeholder-about.jpg"
 >
-	
+<h1>Últimos Artículos</h1>
+<ul>
+  {posts.map((post: { slug: any; title: unknown; excerpt: unknown; date: string | number | Date; }) => (
+	<li>
+	  <a href={`/blog/${post.slug}`}>{post.title}</a>
+	  <p>{post.excerpt}</p>
+	  <small>Publicado el: {new Date(post.date).toLocaleDateString()}</small>
+	</li>
+  ))}
+</ul>
 
 
 </Layout>
