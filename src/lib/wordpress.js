@@ -2,103 +2,68 @@ import { request, gql } from 'graphql-request';
 
 const WP_GRAPHQL_URL = 'https://linen-gnat-102975.hostingersite.com/graphql';
 
+
 export async function getAllPosts() {
-    const query = gql`
-    query GetLatestPosts {
-      posts {
-        nodes {
-          id
-          title
-          slug
-          date
-          content
-          excerpt
-          featuredImage {
-            node {
-              sourceUrl
-            }
-          }
-          categories {
+    const query = `
+        query GetPosts {
+            posts {
             nodes {
-              name
-              slug
+                title
+                slug
+                excerpt
+                date
+                author {
+                node {
+                    name
+                }
+                }
             }
-          }
-          tags {
-            nodes {
-              name
-              slug
             }
-          }
-          author {
-            node {
-              name
-            }
-          }
         }
-      }
-    }
-  `;
-    const data = await request(WP_GRAPHQL_URL, query);
-    return data?.posts?.nodes;
+        `;
+
+    const response = await fetch(WP_GRAPHQL_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query })
+    });
+    const json = await response.json();
+    const posts = json.data.posts.nodes;
+    return posts
 }
 export async function getAllQuitoPosts() {
     const query = gql`
-        query NewQuery {
+        query LoadQuitoPost {
             posts(where: {categoryName: "Quito"}) {
-                edges {
-                node {
-                    id
-                    title
-                    content
-                    featuredImage{
-                    node{
-                        sourceUrl
+                nodes {
+                author {
+                    node {
+                    name
                     }
+                }
+                categories {
+                    nodes {
+                    name
+                    }
+                }
+                content(format: RENDERED)
+                slug
+                title
+                featuredImage {
+                    node {
+                        sourceUrl
                     }
                 }
                 }
             }
         }
     `;
-    const data = await request(WP_GRAPHQL_URL, query);
-    return data?.posts?.nodes;
-}
-export async function getPostBySlug(slug) {
-    const query = gql`
-    query GetPostBySlug($id: ID!) {
-      post(id: $id, idType: SLUG) {
-        id
-        title
-        slug
-        date
-        content
-        featuredImage {
-          node {
-            sourceUrl
-          }
-        }
-        categories {
-          nodes {
-            name
-            slug
-          }
-        }
-        tags {
-          nodes {
-            name
-            slug
-          }
-        }
-        author {
-          node {
-            name
-          }
-        }
-      }
-    }
-  `;
-    const variables = { id: slug };
-    const data = await request(WP_GRAPHQL_URL, query, variables);
-    return data?.post;
+    const response = await fetch(WP_GRAPHQL_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query })
+    });
+    const json = await response.json();
+    const posts = json.data.posts.nodes;
+    return posts
 }

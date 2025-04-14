@@ -1,9 +1,7 @@
 ---
 import Layout from '../../layouts/BlogPost.astro';
-import { getAllPosts, getAllQuitoPosts } from '../../lib/wordpress';
-const posts = await getAllPosts();
-const qposts = await getAllQuitoPosts();
-
+import { getAllQuitoPosts } from '../../lib/wordpress';
+const posts = await getAllQuitoPosts();
 ---
 
 <Layout
@@ -12,27 +10,16 @@ const qposts = await getAllQuitoPosts();
 	pubDate={new Date('August 08 2021')}
 	heroImage="/blog-placeholder-about.jpg"
 >
-<h1>Últimos Artículos</h1>
+<h1>Últimos Artículos de Quito</h1>
 <ul>
   {posts.map((post: { slug: any; title: unknown; excerpt: unknown; date: string | number | Date; }) => (
 	<li>
 	  <a href={`/blog/${post.slug}`}>{post.title}</a>
-	  <p>{post.excerpt}</p>
+	  <p set:html={post.excerpt}></p>
 	  <small>Publicado el: {new Date(post.date).toLocaleDateString()}</small>
 	</li>
   ))}
 </ul>
-<h1>Artículos Quito</h1>
-<p>{typeof qposts}</p>
-<!-- <ul>
-	{qposts.map((qpost: { slug: any; title: unknown; excerpt: unknown; date: string | number | Date; }) => (
-	  <li>
-		<a href={`/blog/${qpost.slug}`}>{qpost.title}</a>
-		<p>{qpost.excerpt}</p>
-		<small>Publicado el: {new Date(qposts.date).toLocaleDateString()}</small>
-	  </li>
-	))}
-  </ul> -->
 
 
 </Layout>

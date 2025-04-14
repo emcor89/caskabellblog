@@ -15,7 +15,7 @@ const posts = await getAllPosts();
   {posts.map((post: { slug: any; title: unknown; excerpt: unknown; date: string | number | Date; }) => (
 	<li>
 	  <a href={`/blog/${post.slug}`}>{post.title}</a>
-	  <p>{post.excerpt}</p>
+	  <p set:html={post.excerpt}></p>
 	  <small>Publicado el: {new Date(post.date).toLocaleDateString()}</small>
 	</li>
   ))}
