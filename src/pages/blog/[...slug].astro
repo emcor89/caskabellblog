@@ -1,35 +1,9 @@
 ---
 import Layout from "../../layouts/BlogPost.astro";
+import {getPostInfo} from "../../lib/wordpress"
 const { slug } = Astro.params;
-const WP_GRAPHQL_URL = 'https://linen-gnat-102975.hostingersite.com/graphql';
-const query = `
-  query GetPostBySlug($slug: ID!) {
-  post(id: $slug, idType: SLUG) {
-    title
-    content
-    date
-    author {
-      node {
-        name
-      }
-    }
-    featuredImage {
-      node {
-        sourceUrl
-      }
-    }
-  }
-}
-`;
+const post = await getPostInfo(slug)
 
-const response = await fetch(WP_GRAPHQL_URL , {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ query, variables: {slug} })
-});
-
-const json = await response.json();
-const post = json.data.post;
 
 export const prerender = false;
 ---

@@ -67,3 +67,36 @@ export async function getAllQuitoPosts() {
     const posts = json.data.posts.nodes;
     return posts
 }
+
+export async function getPostInfo(slug) {
+    const WP_GRAPHQL_URL = 'https://linen-gnat-102975.hostingersite.com/graphql';
+    const query = `
+        query GetPostBySlug($slug: ID!) {
+        post(id: $slug, idType: SLUG) {
+            title
+            content
+            date
+            author {
+            node {
+                name
+            }
+            }
+            featuredImage {
+            node {
+                sourceUrl
+            }
+            }
+        }
+        }
+        `;
+
+    const response = await fetch(WP_GRAPHQL_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query, variables: { slug } })
+    });
+
+    const json = await response.json();
+    const post = json.data.post;
+    return post
+}
