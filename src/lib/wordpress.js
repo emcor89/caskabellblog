@@ -100,3 +100,27 @@ export async function getPostInfo(slug) {
     const post = json.data.post;
     return post
 }
+export async function getAllPostSlugs() {
+    try {
+      const query = gql`
+        query GetAllPostSlugs {
+          posts(first: 100) { 
+            nodes {
+              slug
+            }
+          }
+        }
+      `;
+  
+      const data = await request(WP_GRAPHQL_URL, query);
+  
+      if (data?.posts?.nodes) {
+        return data.posts.nodes.map((post) => post.slug);
+      }
+  
+      return [];
+    } catch (error) {
+      console.error('Error fetching all post slugs:', error);
+      return [];
+    }
+  }

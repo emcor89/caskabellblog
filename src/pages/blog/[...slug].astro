@@ -1,11 +1,16 @@
 ---
 import Layout from "../../layouts/BlogPost.astro";
-import {getPostInfo} from "../../lib/wordpress"
+import { getPostInfo, getAllPostSlugs } from "../../lib/wordpress"; 
+
+export async function getStaticPaths() {
+  const slugs = await getAllPostSlugs(); // Función para obtener todos los slugs de tus posts de WordPress
+  return slugs.map((slug: any) => ({ params: { slug } }));
+}
+
 const { slug } = Astro.params;
-const post = await getPostInfo(slug)
+const post = await getPostInfo(slug);
 
-
-export const prerender = false;
+export const prerender = true;
 ---
 
 <Layout
