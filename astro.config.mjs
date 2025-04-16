@@ -13,7 +13,7 @@ import node from '@astrojs/node';
 export default defineConfig({
   site: 'https://example.com',
   integrations: [mdx(), sitemap(), icon()],
-  output: 'server',
+  output: 'static',
 
   vite: {
     plugins: [tailwindcss()],
