@@ -22,4 +22,8 @@ export default defineConfig({
   adapter: node({
     mode: 'standalone',
   }),
+  experimental: {
+    session: true, // Enable the experimental session flag
+  },
+  
 });
