@@ -1,0 +1,40 @@
+import { c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_DiWc8GIQ.mjs';
+import 'kleur/colors';
+import { $ as $$BlogPost } from '../chunks/BlogPost_Br5uVHmA.mjs';
+export { renderers } from '../renderers.mjs';
+
+const $$Vivo = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "Layout", $$BlogPost, { "title": "Revista", "description": "Lorem ipsum dolor sit amet", "pubDate": /* @__PURE__ */ new Date("August 08 2021"), "heroImage": "/blog-placeholder-about.jpg" }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<main class="flex gap-32 px-6 py-2.5 mx-auto w-full max-w-[1353px] max-md:flex-col max-md:gap-10 max-sm:p-2.5"> <article class="flex flex-col justify-between items-start px-0 py-7 w-[821px] max-md:w-full"> <header class="relative h-[38px] w-[246px]"> <div class="absolute left-0 top-0.5 h-9 bg-yellow-400 w-[110px]" aria-hidden="true"></div> <h1 class="absolute top-0 left-1.5 w-60 text-3xl leading-9 h-[38px]"> <span class="font-bold text-white">En Vivo</span> <span class="font-bold text-neutral-800">Ver Ahora</span> </h1> </header> <p class="mb-5 text-base leading-6 text-neutral-600">
+En Caskabel digital, nos dedicamos a brindarles la cobertura más
+                completa y actualizada sobre noticias, política y deportes.
+                Nuestro equipo de periodistas y colaboradores trabaja
+                incansablemente para ofrecerles artículos profundos, análisis
+                detallados y reportajes exclusivos que les mantendrán informados
+                y comprometidos con los eventos más importantes del mundo.
+</p> <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c6991b2aba508e0e7a619036ba991b7e67209eb9" alt="News coverage" class="w-full h-auto max-w-[806px]"> </article> <div class="flex flex-col gap-14 items-start w-[361px] max-md:w-full"> <aside class="relative w-full bg-yellow-400 h-[300px]" role="complementary" aria-label="Advertisement"> <span class="absolute p-2.5 text-xs leading-3 text-white bg-yellow-800 rounded-xl right-[3px] top-[3px]">
+Ad
+</span> <h2 class="absolute left-5 text-xl font-semibold leading-7 text-white top-[55px]">
+Publicidad Google
+</h2> <p class="absolute left-5 text-sm leading-5 text-white top-[119px] w-[284px]">
+Texto de la publicidad que le se le da a google para generar
+                    algo de ingresos
+</p> <div class="absolute left-5 bottom-14"> <a href="#" class="px-7 py-3.5 text-base text-yellow-700 bg-white rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+Conoce mas
+</a> </div> </aside> <section class="flex flex-col gap-10 items-start px-2.5 py-0 w-full" aria-labelledby="categories-title"> <header class="relative h-8 w-[132px]"> <div class="h-8 bg-yellow-400 w-[130px]" aria-hidden="true"></div> <h2 id="categories-title" class="absolute top-0 text-xl font-semibold leading-7 text-white left-[5px]">
+Categories
+</h2> </header> <nav class="w-full" aria-label="Categories navigation"> <ul class="list-none p-0 m-0"> <li class="flex justify-between items-center py-1.5 border border-emerald-100"> <a href="#politica" class="text-base text-zinc-900 hover:text-yellow-700 focus:outline-none focus:text-yellow-700">Política</a> <span class="text-base text-zinc-900">09</span> </li> <li class="flex justify-between items-center py-1.5 border border-emerald-100"> <a href="#economia" class="text-base text-zinc-900 hover:text-yellow-700 focus:outline-none focus:text-yellow-700">Economía</a> <span class="text-base text-zinc-900">05</span> </li> <li class="flex justify-between items-center py-1.5 border border-emerald-100"> <a href="#deporte" class="text-base text-zinc-900 hover:text-yellow-700 focus:outline-none focus:text-yellow-700">Deporte</a> <span class="text-base text-zinc-900">09</span> </li> <li class="flex justify-between items-center py-1.5 border border-emerald-100"> <a href="#revista" class="text-base text-zinc-900 hover:text-yellow-700 focus:outline-none focus:text-yellow-700">Revista</a> <span class="text-base text-zinc-900">10</span> </li> <li class="flex justify-between items-center py-1.5"> <a href="#tecnologia" class="text-base text-zinc-900 hover:text-yellow-700 focus:outline-none focus:text-yellow-700">Tecnología</a> <span class="text-base text-zinc-900">03</span> </li> </ul> </nav> </section> </div> </main> ` })}`;
+}, "/Users/emiliocoronel/Documents/Documents - Emilio\u2019s Mac mini/Caskabel/web/caskabellblog/src/pages/vivo.astro", void 0);
+
+const $$file = "/Users/emiliocoronel/Documents/Documents - Emilio’s Mac mini/Caskabel/web/caskabellblog/src/pages/vivo.astro";
+const $$url = "/vivo";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+    __proto__: null,
+    default: $$Vivo,
+    file: $$file,
+    url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };
